@@ -1,0 +1,19 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "An app corresponding to Week 7 group challenge 'Notes'.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshSinyor/notes.git"
+  },
+  "author": "JoshSinyor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshSinyor/notes/issues"
+  },
+  "homepage": "https://github.com/JoshSinyor/notes#readme"
+}
