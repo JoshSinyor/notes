@@ -1,4 +1,4 @@
-# MakersBNB Challenge
+# Makers Notes Challenge
 
 This repository supports [Makers](https://makers.tech/) Week 7 group challenge 'notes'.
 
