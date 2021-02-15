@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoshSinyor/notes/issues"
   },
-  "homepage": "https://github.com/JoshSinyor/notes#readme"
+  "homepage": "https://github.com/JoshSinyor/notes#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
 }
