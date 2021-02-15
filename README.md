@@ -12,6 +12,7 @@ This repository supports [Makers](https://makers.tech/) Week 7 group challenge '
 
 To run HTTP_Server:
 
+`npm install http-server --save`
 `node node_modules/http-server/bin/http-server`
 
 2. **Licensing:** This project is licensed under the [GNU GPL v.3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
