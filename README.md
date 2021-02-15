@@ -10,6 +10,10 @@ This repository supports [Makers](https://makers.tech/) Week 7 group challenge '
 [Node Package Manager](https://github.com/makersacademy/course/blob/master/pills/npm.md)
 `npm init`
 
+To run HTTP_Server:
+
+`node node_modules/http-server/bin/http-server`
+
 2. **Licensing:** This project is licensed under the [GNU GPL v.3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 3. **Authors:** This repository is a joint project between its collaborators; @KarstenFinlay, @JoshSinyor, @JosephSpraggon, and @bullhornfixie.
 
