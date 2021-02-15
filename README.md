@@ -5,9 +5,11 @@ This repository supports [Makers](https://makers.tech/) Week 7 group challenge '
 1. **Installation:**
 
 [Node](https://github.com/makersacademy/course/blob/master/pills/node.md)
+
 `brew install node`
 
 [Node Package Manager](https://github.com/makersacademy/course/blob/master/pills/npm.md)
+
 `npm init`
 
 To run HTTP_Server:
