@@ -1,7 +1,7 @@
 function testCircleRadiusDefaultsTo10() {
-  var circle = new Circle();
+  var note = new Note();
 
-  if (circle.radius !== 10) {
+  if (note.radius !== 10) {
     throw new Error("Circle size is not 10");
   }
 };
