@@ -1,6 +1,6 @@
 # Makers Notes Challenge
 
-This repository supports [Makers](https://makers.tech/) Week 7 group challenge 'notes'.
+This repository supports [Makers](https://makers.tech/) Week 7 group challenge '[notes](https://github.com/makersacademy/course/tree/master/further_javascript)'.
 
 1. **Installation:**
 
