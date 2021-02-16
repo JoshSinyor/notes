@@ -16,14 +16,19 @@ function testHomePageHasTitle() {
 
 function testIfAssertIsNeeded() {
   let title = document.getElementById("title")
-  if (title.textContent === "Hello World!")  {
-    throw new Error("Is not Hello World!");
-  }
+
+  if (title.textContent.includes("My Notes")) {
+    console.log("Title includes \"My Notes\".")
+  };
+
+  if !(title.textContent.includes("My Notes")) {
+    throw new Error("Title does not include \"My Notes\".")
+  };
+
 }
 
-ready(() => { 
+ready(() => {
   testCircleRadiusDefaultsTo10();
   testHomePageHasTitle();
   testIfAssertIsNeeded();
 });
-
