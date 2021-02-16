@@ -20,7 +20,8 @@ npm install http-server --save
 ## Table of Contents
 
 #### 1. Creating Testing Framework
-- [ ] Creating First Test
+- [x] Creating First Unit Test
+- [x] Creating First Feature Test
 
 #### 2. Parsing User Stories
 - [ ] User Story 01
@@ -33,7 +34,29 @@ npm install http-server --save
 
 ## 1. Creating Testing Framework
 
-We are instructed to create a testing framework that does not rely on any libraries (except HTTP_Server). To do so, we constructed a basic testing framework out of pure JavaScript.
+We are instructed to create a testing framework that does not rely on any libraries (except HTTP_Server). To do so, we constructed a basic testing framework out of pure JavaScript, using the following template:
+
+```
+let ready = (callback) => {
+  if (document.readyState != "loading") callback();
+  else document.addEventListener("DOMContentLoaded", callback);
+
+  function testIfPageTitleIncludesTitleText() {
+    let title = document.getElementById("title")
+
+    if (title.textContent.includes("My Notes")) {
+      console.log("Title includes \"My Notes\".")
+    }
+    else {
+      throw new Error("Title does not include \"My Notes\".")
+    };
+  };
+
+  ready(() => {
+    testIfPageTitleIncludesTitleText();
+  });
+}
+```
 
 ## 2. Parsing User Stories
 

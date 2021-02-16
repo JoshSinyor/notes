@@ -12,9 +12,8 @@ function testIfPageTitleIncludesTitleText() {
   else {
     throw new Error("Title does not include \"My Notes\".")
   };
-
 }
 
 ready(() => {
   testIfPageTitleIncludesTitleText();
-});
+})
