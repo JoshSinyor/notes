@@ -14,6 +14,14 @@ function testIfPageTitleIncludesTitleText() {
   };
 }
 
+function testTextBox() {
+  let box = document.getElementById("box")
+  if (box !== Element) {
+    throw new Error("Box does not exist!")
+  }
+}
+
 ready(() => {
   testIfPageTitleIncludesTitleText();
+  testTextBox();
 })
