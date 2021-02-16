@@ -8,17 +8,17 @@ function testIfPageTitleIncludesTitleText() {
 
   if (title.textContent.includes("My Notes")) {
     console.log("Title includes \"My Notes\".")
-  }
-  else {
+  } else {
     throw new Error("Title does not include \"My Notes\".")
   };
 }
 
 function testTextBox() {
-  let box = document.getElementById("box")
-  if (box !== Element) {
+  if (document.body.contains(document.getElementById("box"))) {
+    console.log("Box exists.")
+  } else {
     throw new Error("Box does not exist!")
-  }
+  };
 }
 
 ready(() => {

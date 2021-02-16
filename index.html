@@ -1,10 +1,27 @@
+<!DOCTYPE html>
+
 <script src="note.js"></script>
 <script src="tests/assert.js"></script>
 <script src="tests/note-feature-tests.js"></script>
 <script src="tests/note-unit-tests.js"></script>
 
-<link rel="shortcut icon" href="#" />
+<html>
+  <head>
+    <title>Notes</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <link rel="shortcut icon" href="#"/>
+  </head>
 
-<div id="title">My Notes</div>
+  <body>
 
-<div id="plums">This shit is plums</div>
+    <div id="box">
+      <input style="width: 50%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border-radius: 4px">
+      <input style="display: block; float: right; background-color: #4CAF50; border: none; color: white; padding: 16px 32px; text-decoration: none; margin 4px 2px; cursor: pointer;">
+    </div>
+    <div id="topnav">
+      <div id="title">My Notes</div>
+    </div>
+
+    <div class="plums">This shit is plums</div>
+  </body>
+</html>
