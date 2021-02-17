@@ -39,8 +39,28 @@ function testCanSeeOneNote() {
   clear();
 }
 
+function testCanSeeMultipleNotes() {
+  create("Hello there!");
+  create("Bye!")
+  showNotes();
+  let list = document.getElementById("list")
+  if (list.children[0].innerText !== "Hello there!") {
+    throw new Error("First note is not displayed")
+  }
+  if (list.children[1].innerText !== "Bye!") {
+    throw new Error("Second note is not displayed")
+  }
+  clear();
+}
+
+function testChecksIfNotesAre20CharactersLong() {
+  
+}
+
+
 ready(() => {
   testCreateNote()
   testCreateNoteTakesTextFromTheTextArea()
   testCanSeeOneNote()
+  testCanSeeMultipleNotes()
 })
