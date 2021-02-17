@@ -53,8 +53,11 @@ function testCanSeeMultipleNotes() {
   clear();
 }
 
-function testChecksIfNotesAre20CharactersLong() {
-  
+function testChecksIfNoteAre20CharactersLong() {
+  create("I hope that this string is longer than twenty characters")
+  for (let i = 0; i < noteList.length; i++) {
+    let note = noteList[i]
+    if note.len += 
 }
 
 
