@@ -18,10 +18,8 @@ body {
 
 #inner {
   border: 1px solid black;
-  width: 75%;
-  min-width: 500px;
-  max-width: 800px;
-  min-height: 750px;
+  width: 30em;
+  min-height: 42.3em;
   margin: auto;
   background-color: #fff;
   background-image:
@@ -31,19 +29,22 @@ body {
 }
 
   #header {
+    height: 3em;
+    margin-bottom: 1.8em;
+    position: relative;
     background-color: #fff;
     background-image:
       linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px);
     background-size: 100% 1.2em;
-    height: 3em;
-    display: grid;
   }
 
     #header-text {
-      align-self: end;
+      position: absolute;
+      margin-left: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 75%;
       text-align: center;
-      margin-left: 80px;
-      margin-right: 50px;
       font-size: 40px;
     }
 
@@ -51,7 +52,6 @@ body {
     margin-top: 15px;
     margin-left: 80px;
     margin-right: 50px;
-    min-height: 625px;
     line-height: 120%;
   }
 
