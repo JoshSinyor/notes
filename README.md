@@ -25,7 +25,7 @@ npm install http-server --save
 
 #### 2. Parsing User Stories
 - [ ] User Story 01
-- [ ] User Story 02
+- [x] User Story 02
 - [ ] User Story 03
 - [ ] User Story 04
 - [ ] User Story 05

@@ -1,4 +1,68 @@
+@font-face {
+    font-family: 'handwritten-font';
+    src: url('public/Gemmo.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 60px;
+  background-image: url('public/desk_effect.jpg');
+  background-repeat: repeat;
+  font-family: 'handwritten-font';
+  font-size: 25px;
+}
+
+#inner {
   border: 1px solid black;
-  background-color: blue;
+  width: 75%;
+  min-width: 500px;
+  max-width: 1000px;
+  min-height: 750px;
+  margin: auto;
+  background-color: #fff;
+  background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+}
+
+#header {
+  background-color: #fff;
+  background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px);
+  background-size: 100% 1.2em;
+  height: 75px;
+  display: grid;
+}
+
+#header-text {
+  align-self: end;
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 50px;
+  font-size: 40px;
+}
+
+#page {
+  margin-top: 15px;
+  margin-left: 80px;
+  margin-right: 50px;
+  min-height: 625px;
+}
+
+#new-note-box {
+}
+
+#text-box {
+  width: 100%;
+  height: 97px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+#create-button {
+float: right;
 }
