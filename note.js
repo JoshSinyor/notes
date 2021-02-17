@@ -2,7 +2,7 @@ noteList = [];
 
 function createNote() {
   let noteInput = document.getElementById("text-box");
-  noteList.push(noteInput.textContent);
+  noteList.push(noteInput.value);
 }
 
 let createButton = document.getElementById("create-button");
