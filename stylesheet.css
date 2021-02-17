@@ -64,7 +64,8 @@ body {
       height: 4.85em;
       padding-top: 6px;
       background-color: inherit;
-      border: 1px solid black;
+      border: 2px solid #abced4;
+      border-left: none;
     }
 
     #create-button {
