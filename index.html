@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<script src="note.js"></script>
+<script defer src="note.js"></script>
 <script src="tests/assert.js"></script>
 <script src="tests/note-feature-tests.js"></script>
 <script src="tests/note-unit-tests.js"></script>
@@ -21,13 +21,12 @@
 
     <div id="page">
       <div id="new-note-box">
-        <div id="text-box">Here is some text.</div>
-        <button id="create-button">Click Me</button>
+        <textarea id="text-box">Here is some text.</textarea>
+        <button id="create-button">Create</button>
+        <div id="list"></div>
       </div>
    </div>
   </div>
-
-
 
   </body>
 </html>
