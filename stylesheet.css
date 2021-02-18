@@ -51,7 +51,6 @@ body {
     margin-top: 15px;
     margin-left: 80px;
     margin-right: 50px;
-    line-height: 120%;
   }
 
   #new-note-box {
@@ -81,4 +80,6 @@ body {
       margin: 0px;
       margin-bottom: 1.2em;
       padding-left: 0.75em;
+      height: 1em;
+      overflow: hidden;
     }

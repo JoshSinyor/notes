@@ -3,25 +3,25 @@ let ready = (callback) => {
   else document.addEventListener("DOMContentLoaded", callback);
 }
 
-// function testIfPageTitleIncludesTitleText() {
-//   let title = document.getElementById("title")
+function testIfPageTitleIncludesTitleText() {
+  let title = document.getElementById("header-text")
 
-//   if (title.textContent.includes("My Notes")) {
-//     console.log("Title includes \"My Notes\".")
-//   } else {
-//     throw new Error("Title does not include \"My Notes\".")
-//   };
-// }
+  if (title.textContent.includes("Notes")) {
+    console.log("Title includes \"Notes\".")
+  } else {
+    throw new Error("Title does not include \"Notes\".")
+  };
+}
 
-// function testTextBox() {
-//   if (document.body.contains(document.getElementById("box"))) {
-//     console.log("Box exists.")
-//   } else {
-//     throw new Error("Box does not exist!")
-//   };
-// }
+function testTextBox() {
+  if (document.body.contains(document.getElementById("text-box"))) {
+    console.log("Box exists.")
+  } else {
+    throw new Error("Box does not exist!")
+  };
+}
 
-// ready(() => {
-//   testIfPageTitleIncludesTitleText();
-//   testTextBox();
-// })
+ready(() => {
+  testIfPageTitleIncludesTitleText();
+  testTextBox();
+})
