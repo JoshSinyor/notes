@@ -7,25 +7,27 @@ function createNote() {
 
 function showNotes() {
   let list = document.getElementById("list")
-  let notes = ''
+  list.innerHTML = ''
   for (let i = 0; i < noteList.length; i++) {
-    notes += `<p>${noteList[i]}</p>`
+   list.innerHTML += `<p>${clip(noteList[i])}</p>`
   }
-  list.innerHTML = notes
 }
 
-// function clip() {
-//   if (noteList.every(checkLength(text))) {
+function clip(text) {
+  if (text.length > 20) {
+    let clippedString = text.slice(0, 17)
+    return clippedString + "..."
+  } else {
+    return text
+  }
+}
 
-//   }
-// }
-
-// function checkLength(text) {
-//   if (text.length > 20) {
-
-//   }
-// }
+function clearTextBox() {
+  let noteInput = document.getElementById("text-box");
+  noteInput.value = ''
+}
 
 let createButton = document.getElementById("create-button");
 createButton.addEventListener("click", createNote);
+createButton.addEventListener("click", clearTextBox);
 createButton.addEventListener("click", showNotes);
