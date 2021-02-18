@@ -1,9 +1,29 @@
-function clear(){
+function clear(value){
   noteList = []
   noteInput = document.getElementById("text-box")
   noteInput.value = ""
   notes = document.getElementById("list")
   notes.innerHTML = ""
+}
+
+function errorTest(title, customText) {
+  throw new Error("❌" + title + "," + customText)
+}
+
+function passTest(title) {
+  console.log("✅ Passed " + title)
+}
+
+// Only for running tests
+function steamedHam() {
+  testCreateNote()
+  clear()
+  testCreateNoteTakesTextFromTheTextArea()
+  clear()
+  testCanSeeOneNote()
+  clear()
+  testCanSeeMultipleNotes()
+  clear()
 }
 
 // Keeps code DRY
@@ -14,43 +34,52 @@ function create(text) {
 }
 
 function testCreateNote(){
+  title = "testCreateNote"
   createNote();
-  if (noteList.length !== 1) {
-    throw new Error("note list is empty")
+  if (noteList.length < 1) {
+    errorTest(title, "note list is empty")
+  } else {
+    passTest(title)
   }
-  clear();
 }
 
 function testCreateNoteTakesTextFromTheTextArea() {
+  title = "testCreateNoteTakesTextFromTheTextArea"
   create("Hello there!");
-  if (noteList[0] !== "Hello there!") {
-    throw new Error("Text area note was not added")
+  if (noteList.includes("Hello there!")) {
+    passTest(title)
+  } else {
+    errorTest(title, "Text area note was not added")
   }
   clear();
 }
 
 function testCanSeeOneNote() {
+  title = "testCanSeeOneNote"
   create("Hello there!");
   showNotes();
   let list = document.getElementById("list")
   if (list.children[0].innerText !== "Hello there!") {
-    throw new Error("Note not displayed")
+    errorTest(title, "Note not displayed")
+  } else {
+    passTest(title)
   }
-  clear();
 }
 
 function testCanSeeMultipleNotes() {
+  title = "testCanSeeMultipleNotes"
   create("Hello there!");
   create("Bye!")
   showNotes();
   let list = document.getElementById("list")
   if (list.children[0].innerText !== "Hello there!") {
-    throw new Error("First note is not displayed")
+    errorTest(title, "First note is not displayed")
   }
   if (list.children[1].innerText !== "Bye!") {
-    throw new Error("Second note is not displayed")
+    errorTest(title, "Second note is not displayed")
+  } else {
+    passTest(title)
   }
-  clear();
 }
 
 // function testChecksIfNoteIs20CharactersLong() {
@@ -60,12 +89,3 @@ function testCanSeeMultipleNotes() {
 //     throw new Error("Character Length is still greater than 20")
 //   }
 // }
-
-
-ready(() => {
-  testCreateNote()
-  testCreateNoteTakesTextFromTheTextArea()
-  testCanSeeOneNote()
-  testCanSeeMultipleNotes()
-  // testChecksIfNoteIs20CharactersLong()
-})
