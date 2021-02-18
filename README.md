@@ -24,7 +24,7 @@ npm install http-server --save
 - [x] Creating First Feature Test
 
 #### 2. Parsing User Stories
-- [ ] User Story 01
+- [x] User Story 01
 - [x] User Story 02
 - [ ] User Story 03
 - [ ] User Story 04
