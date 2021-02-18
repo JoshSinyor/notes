@@ -1,5 +1,6 @@
 function clear(){
   noteList = []
+  clippedNoteList = []
   noteInput = document.getElementById("text-box")
   noteInput.value = ""
   notes = document.getElementById("list")
@@ -65,11 +66,10 @@ function testChecksIfNoteIs20CharactersLong() {
 function testChecksIfNotesAre20CharactersLong() {
   create("I hope that this string is longer than x characters")
   create("I hope that this string is longer than y characters")
-  clipNoteList()
-  if (clippedNoteList[0].length > 20) {
+  if (clip(noteList[0]).length > 20) {
     throw new Error("Character Length of first element is still greater than 20")
   }
-  if (clippedNoteList[1].length > 20) {
+  if (clip(noteList[1]).length > 20) {
     throw new Error("Character Length of second element is still greater than 20")
   }
   clear();

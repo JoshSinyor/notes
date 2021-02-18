@@ -1,5 +1,4 @@
 noteList = [];
-clippedNoteList = [];
 
 function createNote() {
   let noteInput = document.getElementById("text-box");
@@ -8,30 +7,27 @@ function createNote() {
 
 function showNotes() {
   let list = document.getElementById("list")
-  let notes = ''
-  clipNoteList()
-  for (let i = 0; i < clippedNoteList.length; i++) {
-    notes += `<p>${clippedNoteList[i]}</p>`
-  }
-  list.innerHTML = notes
-}
-
-function clipNoteList() {
+  list.innerHTML = ''
   for (let i = 0; i < noteList.length; i++) {
-    clippedNoteList.push(clip(noteList[i]))
+   list.innerHTML += `<p>${clip(noteList[i])}</p>`
   }
-  return clippedNoteList
 }
 
 function clip(text) {
   if (text.length > 20) {
-    let clippedString = text.slice(0, 20)
-    return clippedString
+    let clippedString = text.slice(0, 17)
+    return clippedString + "..."
   } else {
     return text
   }
 }
 
+function clearTextBox() {
+  let noteInput = document.getElementById("text-box");
+  noteInput.value = ''
+}
+
 let createButton = document.getElementById("create-button");
 createButton.addEventListener("click", createNote);
+createButton.addEventListener("click", clearTextBox);
 createButton.addEventListener("click", showNotes);
