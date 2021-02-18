@@ -80,6 +80,16 @@ body {
       margin: 0px;
       margin-bottom: 1.2em;
       padding-left: 0.75em;
-      height: 1em;
-      overflow: hidden;
+    }
+
+    .list-item:hover span.short{
+      display: none;
+    }
+
+    .long {
+      display: none;
+    }
+
+    .list-item:hover span.long{
+      display: block;
     }

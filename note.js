@@ -9,7 +9,8 @@ function showNotes() {
   let list = document.getElementById("list")
   list.innerHTML = ''
   for (let i = 0; i < noteList.length; i++) {
-   list.innerHTML += `<div class="list-item">${clip(noteList[i])}</div>`
+    console.log(list)
+   list.innerHTML += `<div class= "list-item"><span class="short">${clip(noteList[i])}</span><span class="long">${noteList[i]}</span></div>`
   }
 }
 
@@ -31,3 +32,7 @@ let createButton = document.getElementById("create-button");
 createButton.addEventListener("click", createNote);
 createButton.addEventListener("click", clearTextBox);
 createButton.addEventListener("click", showNotes);
+
+
+
+
