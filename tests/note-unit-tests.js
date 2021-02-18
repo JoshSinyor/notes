@@ -53,19 +53,33 @@ function testCanSeeMultipleNotes() {
   clear();
 }
 
-// function testChecksIfNoteIs20CharactersLong() {
-//   create("I hope that this string is longer than twenty characters")
-//   clip()
-//   if (noteList.checkLength) {
-//     throw new Error("Character Length is still greater than 20")
-//   }
-// }
+function testChecksIfNoteIs20CharactersLong() {
+  create("I hope that this string is longer than twenty characters")
+  clippedString = clip(noteList[0])
+  if (clippedString.length > 20) {
+    throw new Error("Character Length is still greater than 20")
+  }
+  clear();
+}
 
+function testChecksIfNotesAre20CharactersLong() {
+  create("I hope that this string is longer than x characters")
+  create("I hope that this string is longer than y characters")
+  clipNoteList()
+  if (clippedNoteList[0].length > 20) {
+    throw new Error("Character Length of first element is still greater than 20")
+  }
+  if (clippedNoteList[1].length > 20) {
+    throw new Error("Character Length of second element is still greater than 20")
+  }
+  clear();
+}
 
 ready(() => {
   testCreateNote()
   testCreateNoteTakesTextFromTheTextArea()
   testCanSeeOneNote()
   testCanSeeMultipleNotes()
-  // testChecksIfNoteIs20CharactersLong()
+  testChecksIfNoteIs20CharactersLong()
+  testChecksIfNotesAre20CharactersLong()
 })
