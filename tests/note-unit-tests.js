@@ -7,11 +7,11 @@ function clear(value){
 }
 
 function errorTest(title, customText) {
-  throw new Error("❌" + title + "," + customText)
+  console.warn("%c❌" + title + ", " + customText, "color:red")
 }
 
 function passTest(title) {
-  console.log("✅ Passed " + title)
+  console.log("%c✅ Passed " + title, "color:green")
 }
 
 // Only for running tests
@@ -36,7 +36,7 @@ function create(text) {
 function testCreateNote(){
   title = "testCreateNote"
   createNote();
-  if (noteList.length < 1) {
+  if (noteList.length !== 1) {
     errorTest(title, "note list is empty")
   } else {
     passTest(title)
