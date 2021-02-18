@@ -9,7 +9,7 @@ function showNotes() {
   let list = document.getElementById("list")
   list.innerHTML = ''
   for (let i = 0; i < noteList.length; i++) {
-   list.innerHTML += `<p>${clip(noteList[i])}</p>`
+   list.innerHTML += `<div class="list-item">${clip(noteList[i])}</div>`
   }
 }
 
