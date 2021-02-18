@@ -1,6 +1,5 @@
 function clear(){
   noteList = []
-  clippedNoteList = []
   noteInput = document.getElementById("text-box")
   noteInput.value = ""
   notes = document.getElementById("list")

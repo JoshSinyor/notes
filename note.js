@@ -28,6 +28,17 @@ function clearTextBox() {
   noteInput.value = ''
 }
 
+function expandNote() {
+var coll = document.getElementsByClassName("list-item");
+
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.toggle("active");
+    console.log("plum")
+  });
+}
+};
+
 let createButton = document.getElementById("create-button");
 createButton.addEventListener("click", createNote);
 createButton.addEventListener("click", clearTextBox);

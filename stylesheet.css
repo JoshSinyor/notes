@@ -82,7 +82,7 @@ body {
       padding-left: 0.75em;
     }
 
-    .list-item:hover span.short{
+    .list-item:active span.short{
       display: none;
     }
 
@@ -90,6 +90,6 @@ body {
       display: none;
     }
 
-    .list-item:hover span.long{
+    .list-item:active span.long{
       display: block;
     }
