@@ -10,7 +10,7 @@ function showNotes() {
   list.innerHTML = ''
   for (let i = 0; i < noteList.length; i++) {
     console.log(list)
-   list.innerHTML += `<div class= "list-item"><span class="short">${clip(noteList[i])}</span><span class="long">${noteList[i]}</span></div>`
+   list.innerHTML += `<ul class= "list-item"><span class="short">${clip(noteList[i])}</span><span class="long">${noteList[i]}</span></ul>`
   }
 }
 
@@ -28,11 +28,19 @@ function clearTextBox() {
   noteInput.value = ''
 }
 
+function expandNote() {
+  console.log("clicking on a note")
+  let shortNote = document.getElementsByClassName('short')
+  shortNote.display= "none";
+}
+
 let createButton = document.getElementById("create-button");
 createButton.addEventListener("click", createNote);
 createButton.addEventListener("click", clearTextBox);
 createButton.addEventListener("click", showNotes);
 
 
+let notes = document.getElementById("list");
+notes.addEventListener("click", expandNote);
 
 
